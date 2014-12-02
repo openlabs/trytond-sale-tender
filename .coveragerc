@@ -1,0 +1,5 @@
+[run]
+source = trytond.modules.sale_tender
+
+[report]
+omit = */tests/*, */setup.py
