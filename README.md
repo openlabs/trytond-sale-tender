@@ -1,2 +1,2 @@
-trytond-sale-tender
-===================
+trytond-sale-payment
+====================

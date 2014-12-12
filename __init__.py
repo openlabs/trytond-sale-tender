@@ -10,5 +10,5 @@ from trytond.pool import Pool
 
 def register():
     Pool.register(
-        module='sale_tender', type_='model'
+        module='sale_payment', type_='model'
     )
