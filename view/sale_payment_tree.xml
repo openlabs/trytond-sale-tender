@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree string="Tenders">
+    <field name="sale" />
+    <field name="party" />
+    <field name="gateway"/>
+    <field name="provider"/>
+    <field name="amount"/>
+    <field name="amount_remaining"/>
+</tree>

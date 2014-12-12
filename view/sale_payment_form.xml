@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form string="Tenders" col="4">
+    <label name="sale" />
+    <field name="sale" />
+    <newline />
+    <label name="party"/>
+    <field name="party"/>
+    <label name="sequence"/>
+    <field name="sequence"/>
+    <label name="gateway"/>
+    <field name="gateway"/>
+    <label name="payment_profile"/>
+    <field name="payment_profile"/>
+    <label name="provider"/>
+    <field name="provider"/>
+    <label name="method"/>
+    <field name="method"/>
+    <label name="amount"/>
+    <field name="amount"/>
+    <label name="amount_remaining"/>
+    <field name="amount_remaining"/>
+    <field name="payment_transactions" colspan="4"/>
+</form>
