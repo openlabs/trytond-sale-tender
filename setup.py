@@ -84,7 +84,7 @@ requires = []
 
 MODULE2PREFIX = {}
 
-MODULE = "sale_tender"
+MODULE = "sale_payment"
 PREFIX = "openlabs"
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res|webdav)(\W|$)', dep):
@@ -103,7 +103,7 @@ requires.append(
 setup(
     name='%s_%s' % (PREFIX, MODULE),
     version=info.get('version', '0.0.1'),
-    description="Sale Tender Module",
+    description="Sale Payment Module",
     author="Openlabs Technologies and Consulting (P) Ltd.",
     author_email='info@openlabs.co.in',
     url='http://www.openlabs.co.in/',
