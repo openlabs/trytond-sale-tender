@@ -23,7 +23,6 @@ class TestViewsDepends(unittest.TestCase):
         """
         trytond.tests.test_tryton.install_module('sale_payment')
 
-    @unittest.skip("No views defined yet!")
     def test0005views(self):
         '''
         Test views.

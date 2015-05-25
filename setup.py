@@ -27,6 +27,9 @@ class SQLiteTest(Command):
         pass
 
     def run(self):
+        if self.distribution.tests_require:
+            self.distribution.fetch_build_eggs(self.distribution.tests_require)
+
         from trytond.config import CONFIG
         CONFIG['db_type'] = 'sqlite'
         os.environ['DB_NAME'] = ':memory:'
@@ -54,6 +57,9 @@ class PostgresTest(Command):
         pass
 
     def run(self):
+        if self.distribution.tests_require:
+            self.distribution.fetch_build_eggs(self.distribution.tests_require)
+
         from trytond.config import CONFIG
         CONFIG['db_type'] = 'postgresql'
         CONFIG['db_host'] = 'localhost'
@@ -81,8 +87,15 @@ major_version = int(major_version)
 minor_version = int(minor_version)
 
 requires = []
+tests_require = [
+    'pycountry',
+]
 
-MODULE2PREFIX = {}
+MODULE2PREFIX = {
+    'payment_gateway': 'openlabs',
+    'sale_payment_gateway': 'openlabs',
+    'invoice_payment_gateway': 'openlabs',
+}
 
 MODULE = "sale_payment"
 PREFIX = "openlabs"
@@ -131,6 +144,7 @@ setup(
     ],
     license='GPL-3',
     install_requires=requires,
+    tests_require=tests_require,
     zip_safe=False,
     entry_points="""
     [trytond.modules]

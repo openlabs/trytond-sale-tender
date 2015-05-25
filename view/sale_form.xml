@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/notebook/page[@name='gateway_transactions']" position="replace_attributes">
+        <page name="gateway_transactions" string="Payments"/>
+    </xpath>
+    <xpath expr="/form/notebook/page[@name='gateway_transactions']/field[@name='gateway_transactions']" position="replace">
+        <button name="add_payment" colspan="4" string="Add Payment"/>
+        <field name="payments" colspan="4"/>
+        <field name="gateway_transactions" string="Transactions" colspan="4"/>
+    </xpath>
+</data>

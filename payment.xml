@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="sale_payment_view_tree">
+            <field name="model">sale.payment</field>
+            <field name="type">tree</field>
+            <field name="name">sale_payment_tree</field>
+        </record>
+        <record model="ir.ui.view" id="sale_payment_view_form">
+            <field name="model">sale.payment</field>
+            <field name="type">form</field>
+            <field name="name">sale_payment_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_sale_payment_form">
+            <field name="name">Sale Payments</field>
+            <field name="res_model">sale.payment</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_sale_payment_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="sale_payment_view_tree"/>
+            <field name="act_window" ref="act_sale_payment_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_sale_payment_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="sale_payment_view_form"/>
+            <field name="act_window" ref="act_sale_payment_form"/>
+        </record>
+        <menuitem parent="sale.menu_sale_form" sequence="1"
+            action="act_sale_payment_form" id="menu_sale_payment_form"/>
+        <record model="ir.ui.menu-res.group" id="menu_sale_payment_form_group">
+            <field name="menu" ref="menu_sale_payment_form"/>
+            <field name="group" ref="sale.group_sale_admin"/>
+        </record>
+    </data>
+</tryton>
+
